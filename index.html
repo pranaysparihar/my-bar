@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pranay's Bar</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+      <!-- modals project-->
+      <div class="modal project-1">
+        <span class="close" onclick="closeAllOpenModals()">&times;</span>
+        <div class="content">
+          <b>IAM Group creation with IAM policy attached and logged in DynamoDB</b> 
+          <br>
+          <br>
+          <p>Create and IAM user and attach him/her to an IAM user group, trigger a lambda function to log the details of the
+            IAM user in a DynamoDB table, the task was automated using boto3 script </p>
+            <br>
+          <ul>
+            <li>1. Create IAM policy following the restrictive policy </li>
+            <br>
+            <li>2. Assign the IAM policies to IAM groups.</li>
+            <br>
+            <li>3. Add IAM users to the group.</li>
+            <br>
+            <li>4. Writing a lambda function to be triggered whenever a user is created.</li>
+            <br>
+            <li>Using the lambda function to log the details of the IAM user in a DynamoDB table.</li>
+            <br>
+            <li>5. Automate the process using python boto script</li>
+          </ul>
+        </div>
+      </div>
+  
+      <div class="modal project-2">
+        <span class="close" onclick="closeAllOpenModals()">&times;</span>
+        <div class="content">
+          <b>Postgres Container Setup </b> 
+          <br>
+          <br>
+          <p>Setup a Postgres container to log files into a Postgres database.</p>
+          <br>
+          <ul>
+            <li>1. Setup Postgres Container </li>
+            <br>
+            <li>2. Write Dockerfile for Postgres container to communicate with frontend.</li>
+            <br>
+            <li>3. Setup NodeJS as a server.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="modal project-3">
+        <span class="close" onclick="closeAllOpenModals()">&times;</span>
+        <div class="content">
+          <b>Setup AWS Route53 for DNS services</b> 
+          <br>
+          <br>
+          <p>Setup AWS Route 53 for DNS services.</p>
+          <br>
+          <ul>
+            <li>1. Setup Geolocation routing policy to tackle latency. </li>
+            <br>
+            <li>2. Setup Elastic IP address.</li>
+            <br>
+            <li>3. Setup Simple routing policy for our EC2 instances.</li>
+            <br>
+            <li>4. Setup weigted routing policy for the distribution of traffic over our subdomain and primary servers.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="modal project-4">
+        <span class="close" onclick="closeAllOpenModals()">&times;</span>
+        <div class="content">Here is my modal text 4</div>
+      </div>
+      <div class="modal project-5">
+        <span class="close" onclick="closeAllOpenModals()">&times;</span>
+        <div class="content">
+          <b>Cross region S3 replication</b> 
+          <br>
+          <br>
+          <p>Create a python script that will trigger cross-region replication for existing objects.</p>
+          <br>
+          <ul>
+            <li>1. Create two S3 buckets in 2 different regions with cross-region replication. </li>
+            <br>
+            <li>2. Attach bucket policies to the S3 bucket.</li>
+            <br>
+            <li>3. Give IAM role permission.</li>
+            <br>
+          </ul>
+        </div>
+      </div>
+      <div class="modal project-6">
+        <span class="close" onclick="closeAllOpenModals()">&times;</span>
+        <div class="content">
+          <b>Setup VPC flow logs querying with S3 and SQS.</b> 
+          <br>
+          <br>
+          <p>I was responsible for streaming the VPC flow logs in an S3 bucket and then query through them using dead letter queues.</p>
+          <br>
+          <ul>
+            <li>1. Saving VPC flow logs in an S3 bucket. </li>
+            <br>
+            <li>2. Query requests filtered down to a security group.</li>
+            <br>
+            <li>3. Query for generating a list of IP addresses.</li>
+            <br>
+            <li>4. Setup user-pool authentication for API Gateway.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal project-7">
+        <span class="close" onclick="closeAllOpenModals()">&times;</span>
+        <div class="content">
+          <b>Multi-Stage Deployment for iOS Application</b> 
+          <br>
+          <br>
+          <p>Write a multi-stage deployment YAML file for Azure DevOps YAML file.</p>
+          <br>
+          <ul>
+            <li>1. Write a YAML file for BUILD, TEST and PROD environment.</li>
+            <br>
+            <li>2. Setting up tasks specific to iOS like installing AppleProvisioner and AppleCertManager.</li>
+            <br>
+            <li>3. Setup Pull Request triggers.</li>
+            <br>
+            <li>4. Integrate GitHub along with AzureDevOps pipeline for releases.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal project-8">
+        <span class="close" onclick="closeAllOpenModals()">&times;</span>
+        <div class="content">Here is my modal text 8</div>
+      </div>
+      <div class="modal project-9">
+        <span class="close" onclick="closeAllOpenModals()">&times;</span>
+        <div class="content">
+          <b>Failover sequence using Lambda for Database Instances</b> 
+          <br>
+          <br>
+          <p>Write a lambda function to trigger when a MySQL database is not responding to fire up the new database server
+            as a backup. We used 2 lambda function for this task one is the checker function which will check if the MySQL
+            instance is running every minute which is scheduled using CloudWatch Events, the other function is used to shift
+            the traffic from the primary Database instance to the secondary instance, I used the socket and private IP of the
+            database to check the availability of the database.</p>
+          <br>
+          <ul>
+            <li>1. Write a lambda function to trigger when a MySQL database is not responding.</li>
+            <br>
+            <li>2. Write a lambda function to change the instance.</li>
+            <br>
+            <li>3. Setup the recovery database on our EC2 instances</li>
+            <br>
+            <li>4. Setup IAM roles and policies for Lambda to communicate with AWS System Manager.</li>
+            <br>
+            <li>5. Setup StepFunction along with Cloudwatch for lambda function to be triggered every 10 seconds.</li>
+          </ul>
+        </div>
+      </div>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Pranay Singh Parihar" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Pranay Singh Parihar">Pranay's Bar</h1>
+
+          <p class="title">Bartender</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:pranaysparihar@gmail.com" class="contact-link">pranaysparihar@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+917568591982" class="contact-link">+91-7568591982</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1999-11-15">November 15, 1999</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Happy Place</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Menu</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+          </section>
+
+        </div>
+
+      </article>
+
+      <!--
+        - #Menu
+      -->
+
+      <article class="menu" data-page="menu">
+
+        <header>
+          <h2 class="h2 article-title">Menu</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="cloud projects">
+              <a href="#" onclick="openModal('project-1')">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Collins &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $3</h3>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="cloud projects">
+              <a href="#" onclick="openModal('project-2')">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-2.jpeg" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Bramble</h3>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="cloud projects">
+              <a href="#" onclick="openModal('project-3')">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Route53 DNS Setup</h3>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="product">
+              <a href="#" onclick="openModal('project-4')">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Brawlhalla</h3>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="cloud projects">
+              <a href="#" onclick="openModal('project-5')">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Cross region s3 replication</h3>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="cloud projects">
+              <a href="#" onclick="openModal('project-6')">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">VPC flow logs querying with S3 and SQS.</h3>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="cloud projects">
+              <a href="#" onclick="openModal('project-7')">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Multi-stage iOS application deployment</h3>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="product">
+              <a href="#" onclick="openModal('project-8')">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Task Manager</h3>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="cloud projects">
+              <a href="#" onclick="openModal('project-9')">
+
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Serverless Disaster recovery Failover for MySQL database </h3>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
